@@ -4,65 +4,173 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>The Gavonion Isles</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      line-height: 1.6;
+      backdrop-filter: brightness(90%);
+    }
+
+    header {
+      background: rgba(0, 121, 107, 0.85);
+      padding: 2rem 1rem;
+      text-align: center;
+      animation: fadeIn 2s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 3rem;
+      animation: wave 3s infinite;
+    }
+
+    @keyframes wave {
+      0% { transform: rotate(0deg); }
+      50% { transform: rotate(2deg); }
+      100% { transform: rotate(0deg); }
+    }
+
+    header p {
+      font-style: italic;
+      margin-top: 0.5rem;
+      font-size: 1.2rem;
+      color: #c8e6c9;
+    }
+
+    nav {
+      margin-top: 1rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 12px;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    nav a:hover {
+      text-shadow: 0 0 5px #00e676;
+    }
+
+    section {
+      background: rgba(255, 255, 255, 0.1);
+      margin: 2rem auto;
+      padding: 2rem;
+      max-width: 900px;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+      animation: fadeIn 2s ease;
+    }
+
+    section h2 {
+      color: #00e676;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: rgba(0, 77, 64, 0.9);
+      color: white;
+      margin-top: 3rem;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    blockquote {
+      margin: 1.5rem 0;
+      padding: 1rem;
+      background: rgba(0, 121, 107, 0.2);
+      border-left: 5px solid #00e676;
+      font-style: italic;
+    }
+
+    .anthem {
+      font-style: italic;
+      font-size: 1.1rem;
+      margin-top: 1rem;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>🏝️ The Gavonion Isles</h1>
-    <p class="motto">"Strength Through Unity, Freedom Through Imagination"</p>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#symbols">National Symbols</a>
-      <a href="#government">Government</a>
-      <a href="#citizenship">Citizenship</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
 
-  <section id="about">
-    <h2>About the Gavonion Isles</h2>
-    <p>Founded in 2025, the Gavonion Isles were born from the dreams of free spirits seeking a place to build a better world. Legend says the Isles rose from the sea, summoned by the will of explorers and dreamers.</p>
-    <p>Our mission: to protect creativity, unity, and freedom — for all who seek a place to belong.</p>
-  </section>
+<header>
+  <h1>🏝️ The Gavonion Isles</h1>
+  <p>"Strength Through Unity, Freedom Through Imagination"</p>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#geography">Geography</a>
+    <a href="#economy">Economy</a>
+    <a href="#military">Military</a>
+    <a href="#culture">Culture</a>
+    <a href="#citizenship">Citizenship</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
-  <section id="symbols">
-    <h2>National Symbols</h2>
-    <ul>
-      <li><strong>Flag:</strong> 🏴‍☠️ Blue and gold waves representing freedom and hope</li>
-      <li><strong>National Animal:</strong> Dolphin 🐬</li>
-      <li><strong>National Flower:</strong> Hibiscus 🌺</li>
-      <li><strong>Anthem:</strong> "Waves of Glory"</li>
-    </ul>
-  </section>
+<section id="about">
+  <h2>About the Gavonion Isles</h2>
+  <p>Founded in 2025, the Gavonion Isles rose from the depths of imagination to create a nation where dreams shape destiny. Our founders believed in freedom without borders, art without limits, and governance through wisdom and compassion.</p>
+</section>
 
-  <section id="government">
-    <h2>Government</h2>
-    <p>The Gavonion Isles are a Constitutional Republic, led by the Grand Chancellor and the People's Council.</p>
-    <p><em>Excerpt from our Constitution:</em></p>
-    <blockquote>
-      "All citizens of the Gavonion Isles are equal under the sun and stars. Creativity shall be our compass; freedom, our destination."
-    </blockquote>
-  </section>
+<section id="geography">
+  <h2>Geography</h2>
+  <p>The Gavonion Isles consist of 7 lush islands surrounded by crystal-clear waters. Each island offers vibrant jungles, golden beaches, and hidden coves, perfect for exploration and adventure.</p>
+</section>
 
-  <section id="citizenship">
-    <h2>Citizenship</h2>
-    <p>Citizenship is open to all who share our values of imagination, freedom, and community.</p>
-    <h3>Types of Citizenship:</h3>
-    <ul>
-      <li><strong>Explorer:</strong> New citizen, learning our ways.</li>
-      <li><strong>Navigator:</strong> Active citizen contributing to projects.</li>
-      <li><strong>Guardian:</strong> Citizen with leadership and community service roles.</li>
-    </ul>
-    <p>Apply by contacting us and telling us why you want to join the Isles!</p>
-  </section>
+<section id="economy">
+  <h2>Economy</h2>
+  <p>Our economy thrives on innovation, tourism, and arts. Citizens trade crafts, inventions, and ideas, making the Isles a beacon of creativity for visitors and explorers.</p>
+</section>
 
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p>Email: <a href="mailto:gavonionisles@example.com">gavonionisles@example.com</a></p>
-  </section>
+<section id="military">
+  <h2>Military</h2>
+  <p>Peace is our foundation, but our Royal Naval Guard ensures the safety of our sovereignty. The Guard is known for their expertise in maritime defense and their loyalty to the Isles' values.</p>
+</section>
 
-  <footer>
-    <p>© 2025 The Gavonion Isles. All rights reserved.</p>
-  </footer>
+<section id="culture">
+  <h2>Culture</h2>
+  <p>Music, poetry, and celebration flow through the Gavonion Isles like the tides. Every year, the Isles host the Festival of Stars, where art, light, and song illuminate the skies for three magical nights.</p>
+
+  <div class="anthem">
+    <p><strong>National Anthem: "Waves of Glory"</strong></p>
+    <p><em>"O' shining isles of blue and gold,  
+    Our hearts are yours forever bold,  
+    Across the seas, our dreams set free,  
+    Gavonion Isles, our destiny."</em></p>
+  </div>
+</section>
+
+<section id="citizenship">
+  <h2>Citizenship</h2>
+  <p>All who seek creativity, freedom, and unity are welcome. Citizenship levels include:</p>
+  <ul>
+    <li><strong>Explorer:</strong> New citizen</li>
+    <li><strong>Navigator:</strong> Community builder</li>
+    <li><strong>Guardian:</strong> Defender of the Isles</li>
+  </ul>
+</section>
+
+<section id="contact">
+  <h2>Contact Us</h2>
+  <p>📧 Email: <a href="mailto:gavonionisles@example.com">gavonionisles@example.com</a></p>
+</section>
+
+<footer>
+  <p>© 2025 The Gavonion Isles. All rights reserved.</p>
+</footer>
+
 </body>
 </html>
