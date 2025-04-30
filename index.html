@@ -26,42 +26,54 @@
       padding: 0 20px;
     }
 
-    /* Welcome container with vibrant style */
+    /* Welcome container */
     .welcome-container {
-      background: rgba(255, 193, 7, 0.8); /* Vibrant yellow background for the container */
+      background: rgba(0, 0, 0, 0.6); /* Dark semi-transparent background for text readability */
       padding: 3rem;
-      border-radius: 15px;
+      border-radius: 20px;
       max-width: 750px;
       width: 100%;
       box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
     }
 
-    /* Heading style */
-    h1 {
+    /* Spinning effect for the name */
+    .spinning-text {
       font-size: 4.5rem;
       margin-bottom: 1rem;
       font-weight: bold;
       text-transform: uppercase;
-      letter-spacing: 4px;
+      color: #fffae6;
+      letter-spacing: 5px;
       text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
-      color: #0d47a1; /* Blue text for contrast */
+      animation: spin 10s linear infinite;
+    }
+
+    /* Animation for spinning text */
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
     }
 
     /* Paragraph style */
     p {
       font-size: 1.5rem;
-      color: #0d47a1; /* Blue text for contrast */
+      color: #f3f3f3;
       margin-top: 1rem;
       line-height: 1.7;
       letter-spacing: 1.5px;
     }
+
   </style>
 </head>
 <body>
 
   <!-- Welcome section -->
   <div class="welcome-container">
-    <h1>Welcome to the Gavonion Isles</h1>
+    <h1 class="spinning-text">Welcome to the Gavonion Isles</h1>
     <p>Where paradise meets creativity and freedom. Step into a world of beauty, adventure, and endless possibilities.</p>
   </div>
 
