@@ -9,7 +9,7 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: url('https://images.unsplash.com/photo-1547741214-fb575fe0da92?crop=entropy&cs=tinysrgb&fit=max&ixid=MXwyMDg1OXwwfDF8c2VhY3JhfDJ8c2VhY3J8ZW58MHx8fHwxNjU3Mzg1ODg&ixlib=rb-1.2.1&q=80&w=1080') no-repeat center center fixed;
+      background: url('https://images.unsplash.com/photo-1506748686212-6d118e3c5b18?crop=entropy&cs=tinysrgb&fit=max&ixid=MXwyMDg1OXwwfDF8c2VhY3JhfDJ8c2VhY3J8ZW58MHx8fHwxNjU3Mzg1ODg&ixlib=rb-1.2.1&q=80&w=1080') no-repeat center center fixed;
       background-size: cover;
       color: white;
       height: 100vh;
@@ -17,40 +17,36 @@
       justify-content: center;
       align-items: center;
       text-align: center;
+      font-weight: bold;
     }
 
     /* Welcome section style */
     .welcome-container {
-      background: rgba(0, 77, 64, 0.8); /* Slight transparency for the background */
-      padding: 3rem;
+      background: rgba(0, 0, 0, 0.6); /* Dark semi-transparent background for text readability */
+      padding: 4rem;
       border-radius: 15px;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
       width: 90%;
-      max-width: 900px;
-      animation: fadeIn 2s ease;
-    }
-
-    /* Animation for the welcome message */
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    .welcome-container h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-      color: #ffffff;
+      max-width: 800px;
       text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
     }
 
-    .welcome-container p {
-      font-size: 1.2rem;
+    /* Heading style */
+    h1 {
+      font-size: 4rem;
+      margin-bottom: 1.5rem;
+      color: #ffffff;
+    }
+
+    /* Subheading style */
+    p {
+      font-size: 1.5rem;
       color: #d0f1f1;
-      margin-bottom: 2rem;
+      margin-top: 1rem;
       line-height: 1.6;
     }
 
-    /* Adding a fancy footer */
+    /* Footer */
     footer {
       position: fixed;
       bottom: 0;
@@ -58,7 +54,7 @@
       right: 0;
       text-align: center;
       padding: 1rem;
-      background: rgba(0, 77, 64, 0.9);
+      background: rgba(0, 0, 0, 0.7);
       color: white;
     }
   </style>
@@ -68,8 +64,7 @@
   <!-- Welcome page container -->
   <div class="welcome-container">
     <h1>Welcome to the Gavonion Isles</h1>
-    <p>Your journey to a world of creativity, freedom, and adventure begins here.</p>
-    <p>Explore our nation, discover new horizons, and join the movement of dreamers and visionaries!</p>
+    <p>Embark on a journey of creativity, freedom, and new horizons. The adventure begins here!</p>
   </div>
 
   <!-- Footer -->
