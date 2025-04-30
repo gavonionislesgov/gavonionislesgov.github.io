@@ -1,81 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Welcome to The Gavonion Isles</title>
-  <style>
-    /* Reset margin and padding */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to The Gavanian Isles</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: url('background.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
 
-    /* Full body setup */
-    body {
-      height: 100vh;
-      font-family: 'Arial', sans-serif;
-      background: url('https://images.unsplash.com/photo-1494588120673-7035e1c70594?crop=entropy&cs=tinysrgb&fit=max&ixid=MXwyMDg1OXwwfDF8c2VhY3JhfDJ8c2VhY3J8ZW58MHx8fHwxNjU3Mzg1ODg&ixlib=rb-1.2.1&q=80&w=1080') no-repeat center center fixed;
-      background-size: cover;
-      color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 0 20px;
-    }
+        h1 {
+            color: white;
+            font-size: 4em;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+            text-align: center;
+        }
 
-    /* Welcome container */
-    .welcome-container {
-      background: rgba(0, 0, 0, 0.6); /* Dark semi-transparent background for text readability */
-      padding: 3rem;
-      border-radius: 20px;
-      max-width: 750px;
-      width: 100%;
-      box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
-    }
-
-    /* Spinning effect for the name */
-    .spinning-text {
-      font-size: 4.5rem;
-      margin-bottom: 1rem;
-      font-weight: bold;
-      text-transform: uppercase;
-      color: #fffae6;
-      letter-spacing: 5px;
-      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
-      animation: spin 10s linear infinite;
-    }
-
-    /* Animation for spinning text */
-    @keyframes spin {
-      0% {
-        transform: rotate(0deg);
-      }
-      100% {
-        transform: rotate(360deg);
-      }
-    }
-
-    /* Paragraph style */
-    p {
-      font-size: 1.5rem;
-      color: #f3f3f3;
-      margin-top: 1rem;
-      line-height: 1.7;
-      letter-spacing: 1.5px;
-    }
-
-  </style>
+        .container {
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-
-  <!-- Welcome section -->
-  <div class="welcome-container">
-    <h1 class="spinning-text">Welcome to the Gavonion Isles</h1>
-    <p>Where paradise meets creativity and freedom. Step into a world of beauty, adventure, and endless possibilities.</p>
-  </div>
-
+    <div class="container">
+        <h1>Welcome to The Gavanian Isles</h1>
+    </div>
 </body>
 </html>
