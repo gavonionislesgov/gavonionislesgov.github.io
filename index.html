@@ -1,203 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <title>The Gavonion Isles</title>
-   <style>
-     /* Body and background settings */
-     body {
-       margin: 0;
-       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-       background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed;
-       background-size: cover;
-       color: #fff;
-       line-height: 1.6;
-       backdrop-filter: brightness(90%);
-       background: linear-gradient(to right, #00bcd4, #00e676); /* Colorful gradient background */
-       color: white;
-       height: 100vh;
-       display: flex;
-       justify-content: center;
-       align-items: center;
-       text-align: center;
-     }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Gavonion Isles</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-     header {
-       background: rgba(0, 77, 64, 0.85);
-       padding: 2rem 1rem;
-       text-align: center;
-     }
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #00bcd4, #00e676);
+      color: white;
+      line-height: 1.5;
+    }
 
-     /* Welcome section style */
-     .welcome-container {
-       background: rgba(0, 77, 64, 0.8);
-       padding: 3rem;
-       border-radius: 15px;
-       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-       width: 90%;
-       max-width: 900px;
-       animation: fadeIn 2s ease;
-     }
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding-bottom: 2rem;
+    }
 
-     /* Animation for the welcome message */
-     @keyframes fadeIn {
-       from { opacity: 0; transform: translateY(-20px); }
-       to { opacity: 1; transform: translateY(0); }
-     }
+    header {
+      background: rgba(0, 77, 64, 0.85);
+      padding: 1rem;
+      width: 100%;
+    }
 
-     header h1 {
-       margin: 0;
-       font-size: 3rem;
-       animation: wave 3s infinite;
-     }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      animation: wave 3s infinite;
+    }
 
-     @keyframes wave {
-       0% { transform: rotate(0deg); }
-       50% { transform: rotate(2deg); }
-       100% { transform: rotate(0deg); }
-     }
+    @keyframes wave {
+      0%, 100% { transform: rotate(0deg); }
+      50% { transform: rotate(2deg); }
+    }
 
-     header p {
-       font-style: italic;
-       margin-top: 0.5rem;
-     }
+    header p {
+      font-style: italic;
+      margin: 0.3rem 0;
+    }
 
-     nav {
-       margin-top: 1rem;
-     }
+    nav {
+      margin-top: 0.5rem;
+    }
 
-     nav a {
-       color: white;
-       text-decoration: none;
-       margin: 0 12px;
-       font-weight: bold;
-       font-size: 1.1rem;
-     }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 8px;
+      font-weight: bold;
+      font-size: 1rem;
+    }
 
-     nav a:hover {
-       text-shadow: 0 0 5px #00e676;
-     }
+    nav a:hover {
+      text-shadow: 0 0 4px #00e676;
+    }
 
-     section {
-       background: rgba(255, 255, 255, 0.1);
-       margin: 2rem auto;
-       padding: 1.5rem;
-       max-width: 900px;
-       border-radius: 12px;
-       box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
-       animation: fadeIn 2s ease;
-       text-align: left;
-     }
+    .welcome-container {
+      background: rgba(0, 77, 64, 0.8);
+      padding: 1.5rem;
+      margin: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      max-width: 90%;
+    }
 
-     section h2 {
-       color: #00e676;
-       color: #d0f1f1;
-       margin-bottom: 1.5rem;
-     }
+    section {
+      background: rgba(255, 255, 255, 0.08);
+      margin: 1rem auto;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      max-width: 90%;
+    }
 
-     footer {
-       display: none;
-     }
+    section h2 {
+      color: #d0f1f1;
+      margin-bottom: 0.5rem;
+      font-size: 1.3rem;
+    }
 
-     ul {
-       padding-left: 1.2rem;
-     }
+    section p, .anthem {
+      font-size: 0.95rem;
+      margin: 0.5rem 0;
+    }
 
-     blockquote {
-       margin: 1.5rem 0;
-       padding: 1rem;
-       background: rgba(0, 121, 107, 0.2);
-       border-left: 5px solid #00e676;
-       font-style: italic;
-     }
+    ul {
+      padding-left: 1rem;
+      text-align: left;
+    }
 
-     .anthem {
-       font-style: italic;
-       font-size: 1.1rem;
-       margin-top: 1rem;
-       text-align: center;
-     }
+    ul li {
+      font-size: 0.95rem;
+      margin-bottom: 0.4rem;
+    }
 
-     .content-wrapper {
-       max-width: 900px;
-       margin: 0 auto;
-     }
-   </style>
+    .anthem {
+      font-style: italic;
+      margin-top: 1rem;
+    }
+
+    a {
+      color: #c8e6c9;
+    }
+  </style>
 </head>
 <body>
 
-<header>
-   <h1>🏝️ The Gavonion Isles</h1>
-   <p>"Strength Through Unity, Freedom Through Imagination"</p>
-   <nav>
-     <a href="#about">About</a>
-     <a href="#geography">Geography</a>
-     <a href="#economy">Economy</a>
-     <a href="#military">Military</a>
-     <a href="#culture">Culture</a>
-     <a href="#citizenship">Citizenship</a>
-     <a href="#contact">Contact</a>
-   </nav>
-</header>
-
-<div class="content-wrapper">
+  <header>
+    <h1>🏝️ The Gavonion Isles</h1>
+    <p>"Unity. Freedom. Imagination."</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#geo">Geography</a>
+      <a href="#eco">Economy</a>
+      <a href="#mil">Military</a>
+      <a href="#culture">Culture</a>
+      <a href="#cit">Citizenship</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
   <div class="welcome-container">
-     <h1>Welcome to the Gavonion Isles</h1>
-     <p>Your journey to creativity, freedom, and adventure starts here.</p>
-     <p>Explore our nation, discover new horizons, and join the dreamers!</p>
+    <h2>Welcome!</h2>
+    <p>Enter a world of color, freedom, and dreams.</p>
+    <p>Explore. Imagine. Belong.</p>
   </div>
 
   <section id="about">
-     <h2>About</h2>
-     <p>Founded in 2025, the Gavonion Isles were created to offer freedom, art, and wisdom. Our founders dreamed of a place without borders, full of possibilities.</p>
+    <h2>About</h2>
+    <p>Born in 2025, the Isles were made for peace, art, and open minds.</p>
   </section>
 
-  <section id="geography">
-     <h2>Geography</h2>
-     <p>Seven lush islands with jungles, beaches, and hidden coves await your discovery.</p>
+  <section id="geo">
+    <h2>Geography</h2>
+    <p>Seven islands. Blue waters. Green forests. Golden sand.</p>
   </section>
 
-  <section id="economy">
-     <h2>Economy</h2>
-     <p>Our economy thrives on creativity, arts, and tourism. We trade crafts and ideas, inspiring all who visit.</p>
+  <section id="eco">
+    <h2>Economy</h2>
+    <p>We trade ideas, art, and experiences. Tourists love it here!</p>
   </section>
 
-  <section id="military">
-     <h2>Military</h2>
-     <p>While we cherish peace, our Royal Naval Guard ensures our safety with maritime defense.</p>
+  <section id="mil">
+    <h2>Military</h2>
+    <p>We seek peace, but guard our waters with pride and care.</p>
   </section>
 
   <section id="culture">
-     <h2>Culture</h2>
-     <p>Music and art are central to our culture. The Festival of Stars lights up the sky each year for three magical nights.</p>
-
-     <div class="anthem">
-       <p><strong>National Anthem: "Waves of Glory"</strong></p>
-       <p><em>"O' shining isles of blue and gold,  
-       Our hearts are yours forever bold,  
-       Across the seas, our dreams set free,  
-       Gavonion Isles, our destiny."</em></p>
-     </div>
+    <h2>Culture</h2>
+    <p>Music and lights fill our festivals. Joy is in the air.</p>
+    <div class="anthem">
+      <p><strong>"Waves of Glory"</strong></p>
+      <p><em>"O' shining isles of blue and gold,<br>
+      Our hearts are yours forever bold,<br>
+      Across the seas, our dreams set free,<br>
+      Gavonion Isles, our destiny."</em></p>
+    </div>
   </section>
 
-  <section id="citizenship">
-     <h2>Citizenship</h2>
-     <p>Join us in creativity and unity. Citizenship levels:</p>
-     <ul>
-       <li><strong>Explorer:</strong> New citizen</li>
-       <li><strong>Navigator:</strong> Community builder</li>
-       <li><strong>Guardian:</strong> Defender of the Isles</li>
-     </ul>
+  <section id="cit">
+    <h2>Citizenship</h2>
+    <p>All are welcome. Be part of our dream.</p>
+    <ul>
+      <li><strong>Explorer:</strong> New friend</li>
+      <li><strong>Navigator:</strong> Community helper</li>
+      <li><strong>Guardian:</strong> Proud protector</li>
+    </ul>
   </section>
 
   <section id="contact">
-     <h2>Contact</h2>
-     <p>📧 Email: <a href="mailto:gavonionisles@example.com">gavonionisles@example.com</a></p>
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:gavonionisles@example.com">gavonionisles@example.com</a></p>
   </section>
-
-</div>
 
 </body>
 </html>
