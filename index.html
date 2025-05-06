@@ -4,7 +4,115 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Gavonion Isles</title>
-  <link rel="stylesheet" href="styles.css"> <!-- Link to the external CSS file -->
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #00bcd4, #00e676);
+      color: white;
+      line-height: 1.5;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding-bottom: 2rem;
+    }
+
+    header {
+      background: rgba(0, 77, 64, 0.85);
+      padding: 1rem;
+      width: 100%;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      animation: wave 3s infinite;
+    }
+
+    @keyframes wave {
+      0%, 100% { transform: rotate(0deg); }
+      50% { transform: rotate(2deg); }
+    }
+
+    header p {
+      font-style: italic;
+      margin: 0.3rem 0;
+    }
+
+    nav {
+      margin-top: 0.5rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 8px;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+
+    nav a:hover {
+      text-shadow: 0 0 4px #00e676;
+    }
+
+    .welcome-container {
+      background: rgba(0, 77, 64, 0.8);
+      padding: 1.5rem;
+      margin: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      max-width: 90%;
+    }
+
+    section {
+      background: rgba(255, 255, 255, 0.08);
+      margin: 1rem auto;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      max-width: 90%;
+    }
+
+    section h2 {
+      color: #d0f1f1;
+      margin-bottom: 0.5rem;
+      font-size: 1.3rem;
+    }
+
+    section p, .anthem {
+      font-size: 0.95rem;
+      margin: 0.5rem 0;
+    }
+
+    ul {
+      padding-left: 1rem;
+      text-align: left;
+    }
+
+    ul li {
+      font-size: 0.95rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .anthem {
+      font-style: italic;
+      margin-top: 1rem;
+    }
+
+    a {
+      color: #c8e6c9;
+    }
+  </style>
 </head>
 <body>
 
@@ -12,13 +120,13 @@
     <h1>🏝️ The Gavonion Isles</h1>
     <p>"Unity. Freedom. Imagination."</p>
     <nav>
-      <a href="about.html">About</a>
-      <a href="geography.html">Geography</a>
-      <a href="economy.html">Economy</a>
-      <a href="military.html">Military</a>
-      <a href="culture.html">Culture</a>
-      <a href="citizenship.html">Citizenship</a>
-      <a href="contact.html">Contact</a>
+      <a href="#about">About</a>
+      <a href="#geo">Geography</a>
+      <a href="#eco">Economy</a>
+      <a href="#mil">Military</a>
+      <a href="#culture">Culture</a>
+      <a href="#cit">Citizenship</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
 
@@ -27,6 +135,53 @@
     <p>Enter a world of color, freedom, and dreams.</p>
     <p>Explore. Imagine. Belong.</p>
   </div>
+
+  <section id="about">
+    <h2>About</h2>
+    <p>Born in 2025, the Isles were made for peace, art, and open minds.</p>
+  </section>
+
+  <section id="geo">
+    <h2>Geography</h2>
+    <p>Seven islands. Blue waters. Green forests. Golden sand.</p>
+  </section>
+
+  <section id="eco">
+    <h2>Economy</h2>
+    <p>We trade ideas, art, and experiences. Tourists love it here!</p>
+  </section>
+
+  <section id="mil">
+    <h2>Military</h2>
+    <p>We seek peace, but guard our waters with pride and care.</p>
+  </section>
+
+  <section id="culture">
+    <h2>Culture</h2>
+    <p>Music and lights fill our festivals. Joy is in the air.</p>
+    <div class="anthem">
+      <p><strong>"Waves of Glory"</strong></p>
+      <p><em>"O' shining isles of blue and gold,<br>
+      Our hearts are yours forever bold,<br>
+      Across the seas, our dreams set free,<br>
+      Gavonion Isles, our destiny."</em></p>
+    </div>
+  </section>
+
+  <section id="cit">
+    <h2>Citizenship</h2>
+    <p>All are welcome. Be part of our dream.</p>
+    <ul>
+      <li><strong>Explorer:</strong> New friend</li>
+      <li><strong>Navigator:</strong> Community helper</li>
+      <li><strong>Guardian:</strong> Proud protector</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:gavonionisles@example.com">gavonionisles@example.com</a></p>
+  </section>
 
 </body>
 </html>
