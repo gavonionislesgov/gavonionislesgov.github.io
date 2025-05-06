@@ -1,3 +1,4 @@
+You said:
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,47 +8,36 @@
   <style>
     * {
       box-sizing: border-box;
-      margin: 0;
-      padding: 0;
     }
 
     html, body {
-      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: linear-gradient(to right, #00bcd4, #00e676);
       color: white;
-      overflow-x: hidden;
+      line-height: 1.5;
     }
 
     body {
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      padding: 0 2rem;
       text-align: center;
+      padding-bottom: 2rem;
     }
 
     header {
       background: rgba(0, 77, 64, 0.85);
+      padding: 1rem;
       width: 100%;
-      padding: 2rem;
-      border-radius: 0 0 25px 25px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 10;
-      text-align: center;
-      color: white;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
     }
 
     header h1 {
-      font-size: 3rem;
-      margin-bottom: 0.5rem;
-      animation: wave 3s ease-in-out infinite;
+      margin: 0;
+      font-size: 2.5rem;
+      animation: wave 3s infinite;
     }
 
     @keyframes wave {
@@ -57,111 +47,72 @@
 
     header p {
       font-style: italic;
-      font-size: 1.1rem;
+      margin: 0.3rem 0;
     }
 
     nav {
-      margin-top: 1rem;
+      margin-top: 0.5rem;
     }
 
     nav a {
       color: white;
       text-decoration: none;
-      margin: 0 12px;
+      margin: 0 8px;
       font-weight: bold;
-      font-size: 1.2rem;
-      transition: color 0.3s ease;
+      font-size: 1rem;
     }
 
     nav a:hover {
-      color: #00e676;
+      text-shadow: 0 0 4px #00e676;
     }
 
     .welcome-container {
       background: rgba(0, 77, 64, 0.8);
-      padding: 2rem;
-      margin-top: 120px;
+      padding: 1.5rem;
+      margin: 1rem;
       border-radius: 12px;
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
-      max-width: 80%;
-      animation: fadeIn 2s ease-out;
-    }
-
-    @keyframes fadeIn {
-      0% { opacity: 0; }
-      100% { opacity: 1; }
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      max-width: 90%;
     }
 
     section {
       background: rgba(255, 255, 255, 0.08);
-      margin: 2rem auto;
-      padding: 2rem;
+      margin: 1rem auto;
+      padding: 1rem;
       border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-      max-width: 80%;
-      transition: transform 0.3s ease;
-    }
-
-    section:hover {
-      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      max-width: 90%;
     }
 
     section h2 {
       color: #d0f1f1;
-      margin-bottom: 1rem;
-      font-size: 1.8rem;
-      text-shadow: 0 0 10px #fff, 0 0 10px #00e676;
+      margin-bottom: 0.5rem;
+      font-size: 1.3rem;
     }
 
     section p, .anthem {
-      font-size: 1rem;
-      margin: 1rem 0;
+      font-size: 0.95rem;
+      margin: 0.5rem 0;
     }
 
     ul {
-      padding-left: 2rem;
+      padding-left: 1rem;
       text-align: left;
-      font-size: 1.1rem;
     }
 
     ul li {
-      margin-bottom: 0.8rem;
+      font-size: 0.95rem;
+      margin-bottom: 0.4rem;
     }
 
     .anthem {
       font-style: italic;
-      font-size: 1.2rem;
+      margin-top: 1rem;
     }
 
-    .cta-button {
-      background-color: #00e676;
-      color: #fff;
-      padding: 12px 24px;
-      border-radius: 30px;
-      font-size: 1.1rem;
-      text-decoration: none;
-      margin-top: 2rem;
-      display: inline-block;
-      transition: transform 0.3s ease, background-color 0.3s ease;
+    a {
+      color: #c8e6c9;
     }
-
-    .cta-button:hover {
-      background-color: #00bcd4;
-      transform: scale(1.1);
-    }
-
-    footer {
-      background-color: rgba(0, 77, 64, 0.8);
-      padding: 1rem;
-      width: 100%;
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      text-align: center;
-      font-size: 1rem;
-      color: white;
-    }
-
   </style>
 </head>
 <body>
@@ -181,34 +132,34 @@
   </header>
 
   <div class="welcome-container">
-    <h2>Welcome to The Gavonion Isles</h2>
-    <p>Where color, freedom, and dreams come alive.</p>
-    <a href="#about" class="cta-button">Learn More</a>
+    <h2>Welcome!</h2>
+    <p>Enter a world of color, freedom, and dreams.</p>
+    <p>Explore. Imagine. Belong.</p>
   </div>
 
   <section id="about">
     <h2>About</h2>
-    <p>Born in 2025, the Gavonion Isles represent peace, creativity, and inclusivity. A land for explorers, dreamers, and those who seek something greater.</p>
+    <p>Born in 2025, the Isles were made for peace, art, and open minds.</p>
   </section>
 
   <section id="geo">
     <h2>Geography</h2>
-    <p>Seven islands surrounded by the bluest of waters, lush green forests, and golden sand beaches await. A paradise that calls to the adventurer in everyone.</p>
+    <p>Seven islands. Blue waters. Green forests. Golden sand.</p>
   </section>
 
   <section id="eco">
     <h2>Economy</h2>
-    <p>Our economy thrives on trade of art, culture, and experiences. Tourists are drawn here not only for the beauty but for the chance to be part of a larger vision.</p>
+    <p>We trade ideas, art, and experiences. Tourists love it here!</p>
   </section>
 
   <section id="mil">
     <h2>Military</h2>
-    <p>While peace reigns, we remain vigilant. Our forces are dedicated to preserving the tranquility and safety of our waters and shores.</p>
+    <p>We seek peace, but guard our waters with pride and care.</p>
   </section>
 
   <section id="culture">
     <h2>Culture</h2>
-    <p>The heart of Gavonion Isles beats through its music, arts, and festivals. Every year, we gather to celebrate freedom, expression, and community.</p>
+    <p>Music and lights fill our festivals. Joy is in the air.</p>
     <div class="anthem">
       <p><strong>"Waves of Glory"</strong></p>
       <p><em>"O' shining isles of blue and gold,<br>
@@ -220,11 +171,11 @@
 
   <section id="cit">
     <h2>Citizenship</h2>
-    <p>Become part of the dream. Everyone is welcome, from explorers to protectors.</p>
+    <p>All are welcome. Be part of our dream.</p>
     <ul>
-      <li><strong>Explorer:</strong> A new friend discovering our world</li>
-      <li><strong>Navigator:</strong> A guide helping our community</li>
-      <li><strong>Guardian:</strong> A proud defender of the Isles</li>
+      <li><strong>Explorer:</strong> New friend</li>
+      <li><strong>Navigator:</strong> Community helper</li>
+      <li><strong>Guardian:</strong> Proud protector</li>
     </ul>
   </section>
 
@@ -232,10 +183,6 @@
     <h2>Contact</h2>
     <p>Email: <a href="mailto:gavonionisles@example.com">gavonionisles@example.com</a></p>
   </section>
-
-  <footer>
-    <p>© 2025 The Gavonion Isles | All Rights Reserved</p>
-  </footer>
 
 </body>
 </html>
