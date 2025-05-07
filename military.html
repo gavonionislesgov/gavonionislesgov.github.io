@@ -27,43 +27,40 @@
         header h1 {
             margin: 0;
             font-size: 2.5rem;
-            display: inline-block;
-            animation: rotateText 3s infinite alternate ease-in-out;
         }
 
-        @keyframes rotateText {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(3deg); }
-        }
-
-        section {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 1rem;
-            margin: 1rem auto;
-            border-radius: 10px;
+        .container {
             max-width: 80%;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            margin: 2rem auto;
+            background: rgba(0, 77, 64, 0.8);
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
         }
 
-        section h2 {
+        h2 {
             color: #d0f1f1;
         }
 
+        a {
+            color: #c8e6c9;
+        }
+
         .home-button {
-            display: block;
-            margin: 20px auto;
+            display: inline-block;
             padding: 10px 20px;
             background: rgba(0, 77, 64, 0.9);
             color: white;
             text-decoration: none;
             font-size: 1.2rem;
-            border-radius: 5px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
             transition: background 0.3s ease-in-out;
         }
 
         .home-button:hover {
             background: rgba(0, 77, 64, 1);
+            text-shadow: 0 0 6px #00e676;
         }
     </style>
 </head>
@@ -73,26 +70,29 @@
         <h1>🛡️ Military of the Gavonion Isles</h1>
     </header>
 
-    <section>
+    <div class="container">
         <h2>Overview</h2>
-        <p>The Gavonion Defense Force (GDF) is committed to protecting the Isles with advanced technology, strong alliances, and strategic defense initiatives.</p>
-    </section>
+        <p>The Gavonion Defense Force (GDF) is dedicated to protecting the Isles, utilizing advanced technology, strong alliances, and strategic defense initiatives.</p>
+    </div>
 
-    <section>
+    <div class="container">
         <h2>Branches</h2>
         <ul>
             <li><strong>Gavonion Army:</strong> Skilled ground forces responsible for national defense and peacekeeping.</li>
             <li><strong>Gavonion Navy:</strong> Guardians of the Isles' waters, ensuring maritime security and patrol operations.</li>
             <li><strong>Gavonion Air Force:</strong> Specialized aerial units providing surveillance, rapid response, and air defense.</li>
         </ul>
-    </section>
+    </div>
 
-    <section>
+    <div class="container">
         <h2>Strategic Vision</h2>
-        <p>The GDF focuses on maintaining peace while staying prepared for any challenge, fostering resilience and international cooperation.</p>
-    </section>
+        <p>The GDF prioritizes peace, preparedness, and global cooperation to ensure security and stability for all citizens.</p>
+    </div>
 
-    <a class="home-button" href="index.html">Return to Home Page</a>
+    <div class="container">
+        <h2>Return Home</h2>
+        <p><a href="index.html" class="home-button">🏡 Back to The Gavonion Isles 🏝️ </a></p>
+    </div>
 
 </body>
 </html>
