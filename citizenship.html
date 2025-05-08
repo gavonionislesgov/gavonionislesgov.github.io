@@ -64,27 +64,6 @@
         .selected {
             background: #00e676 !important;
         }
-
-        .submit-container {
-            margin: 2rem auto;
-        }
-
-        .submit-button {
-            padding: 12px 24px;
-            font-size: 1.4rem;
-            background: rgba(0, 77, 64, 1);
-            color: white;
-            border: none;
-            cursor: pointer;
-            border-radius: 8px;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-            transition: background 0.3s ease-in-out;
-        }
-
-        .submit-button:hover {
-            background: #00e676;
-            text-shadow: 0 0 6px white;
-        }
     </style>
 </head>
 <body>
@@ -167,15 +146,19 @@
 
     <div class="container">
         <h2>Question 10: When is the National Day of the Gavonion Isles?</h2>
-        <button onclick="selectAnswer(this, 'q10')">A) June 17</button>
-        <button onclick="selectAnswer(this, 'q10')">B) February 29</button>
-        <button onclick="selectAnswer(this, 'q10')">C) October 31</button>
-        <button onclick="selectAnswer(this, 'q10')">D) July 20</button>
+        <button onclick="selectAnswer(this, 'q10')">A) June 17</button> <!-- Official National Day -->
+        <button onclick="selectAnswer(this, 'q10')">B) February 29</button> <!-- Leap Day -->
+        <button onclick="selectAnswer(this, 'q10')">C) October 31</button> <!-- Halloween -->
+        <button onclick="selectAnswer(this, 'q10')">D) July 20</button> <!-- Moon Landing Anniversary -->
     </div>
 
-    <div class="submit-container">
-        <button class="submit-button">Submit Answers</button>
-    </div>
+    <script>
+        function selectAnswer(button, questionId) {
+            let buttons = document.querySelectorAll(`.container button[onclick*='${questionId}']`);
+            buttons.forEach(btn => btn.classList.remove("selected"));
+            button.classList.add("selected");
+        }
+    </script>
 
 </body>
 </html>
