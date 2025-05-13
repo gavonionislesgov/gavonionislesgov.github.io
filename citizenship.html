@@ -1,170 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gavonion Isles Citizenship Quiz</title>
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gavonion Isles Citizenship Quiz</title>
+  <style>
+    * { box-sizing: border-box; }
 
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            text-align: center;
-            background: linear-gradient(to right, #00bcd4, #00e676);
-            color: white;
-        }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-align: center;
+      background: linear-gradient(to right, #00bcd4, #00e676);
+      color: white;
+    }
 
-        header {
-            background: rgba(0, 77, 64, 0.85);
-            padding: 1.2rem;
-            width: 100%;
-        }
+    header {
+      background: rgba(0, 77, 64, 0.85);
+      padding: 1.2rem;
+      width: 100%;
+    }
 
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
 
-        .container {
-            max-width: 80%;
-            margin: 2rem auto;
-            background: rgba(0, 77, 64, 0.8);
-            padding: 1.5rem;
-            border-radius: 12px;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-        }
+    .container {
+      max-width: 80%;
+      margin: 2rem auto;
+      background: rgba(0, 77, 64, 0.8);
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    }
 
-        h2 {
-            color: #d0f1f1;
-        }
+    h2 {
+      color: #d0f1f1;
+    }
 
-        button {
-            display: block;
-            margin: 10px auto;
-            padding: 10px;
-            background: rgba(0, 77, 64, 0.9);
-            color: white;
-            border: none;
-            cursor: pointer;
-            font-size: 1.2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            transition: background 0.3s ease-in-out;
-        }
+    button {
+      display: block;
+      margin: 10px auto;
+      padding: 10px;
+      background: rgba(0, 77, 64, 0.9);
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 1.2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      transition: background 0.3s ease-in-out;
+    }
 
-        button:hover {
-            background: rgba(0, 77, 64, 1);
-            text-shadow: 0 0 6px #00e676;
-        }
+    button:hover {
+      background: rgba(0, 77, 64, 1);
+      text-shadow: 0 0 6px #00e676;
+    }
 
-        .selected {
-            background: #00e676 !important;
-        }
-    </style>
+    .selected {
+      background: #00e676 !important;
+      color: black !important;
+    }
+
+    #submit-btn {
+      background-color: #004d40;
+      font-weight: bold;
+      margin: 30px auto;
+    }
+
+    #result {
+      font-size: 1.5rem;
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
 
-    <header>
-        <h1>Gavonion Isles Citizenship Quiz</h1>
-    </header>
+  <header>
+    <h1>Gavonion Isles Citizenship Quiz</h1>
+  </header>
 
+  <div id="quiz">
+
+    <!-- Questions 1 to 10 -->
     <div class="container">
-        <h2>Question 1: What is the capital of the Gavonion Isles?</h2>
-        <button onclick="selectAnswer(this, 'q1')">A) Havenport</button>
-        <button onclick="selectAnswer(this, 'q1')">B) Velmora</button>
-        <button onclick="selectAnswer(this, 'q1')">C) Suncrest</button>
-        <button onclick="selectAnswer(this, 'q1')">D) Oceandale</button>
-        <button onclick="selectAnswer(this, 'q1')">E) Crestfall</button>
+      <h2>Question 1: What is the capital of the Gavonion Isles?</h2>
+      <button onclick="selectAnswer(this, 'q1', 'A')">A) Havenport</button>
+      <button onclick="selectAnswer(this, 'q1', 'B')">B) Velmora</button>
+      <button onclick="selectAnswer(this, 'q1', 'C')">C) Suncrest</button>
+      <button onclick="selectAnswer(this, 'q1', 'D')">D) Oceandale</button>
+      <button onclick="selectAnswer(this, 'q1', 'E')">E) Crestfall</button>
     </div>
 
     <div class="container">
-        <h2>Question 2: What is the national motto of the Gavonion Isles?</h2>
-        <button onclick="selectAnswer(this, 'q2')">A) Through Waves, We Rise</button>
-        <button onclick="selectAnswer(this, 'q2')">B) Honor, Unity, Discovery</button>
-        <button onclick="selectAnswer(this, 'q2')">C) Suncrest to Starveil, One Nation Forever</button>
-        <button onclick="selectAnswer(this, 'q2')">D) Unity, Freedom, Imagination</button>
+      <h2>Question 2: What is the national motto of the Gavonion Isles?</h2>
+      <button onclick="selectAnswer(this, 'q2', 'A')">A) Through Waves, We Rise</button>
+      <button onclick="selectAnswer(this, 'q2', 'B')">B) Honor, Unity, Discovery</button>
+      <button onclick="selectAnswer(this, 'q2', 'C')">C) Suncrest to Starveil, One Nation Forever</button>
+      <button onclick="selectAnswer(this, 'q2', 'D')">D) Unity, Freedom, Imagination</button>
+      <button onclick="selectAnswer(this, 'q2', 'E')">E) Strength from Sea and Sky</button>
     </div>
 
     <div class="container">
-        <h2>Question 3: What are the dominant spiritual beliefs in the Gavonion Isles?</h2>
-        <button onclick="selectAnswer(this, 'q3')">A) Tidesong Faith</button>
-        <button onclick="selectAnswer(this, 'q3')">B) Starveil Mysticism</button>
-        <button onclick="selectAnswer(this, 'q3')">C) Solanism</button>
-        <button onclick="selectAnswer(this, 'q3')">D) The Echoic Path</button>
+      <h2>Question 3: What are the dominant spiritual beliefs in the Gavonion Isles?</h2>
+      <button onclick="selectAnswer(this, 'q3', 'A')">A) Tidesong Faith</button>
+      <button onclick="selectAnswer(this, 'q3', 'B')">B) Starveil Mysticism</button>
+      <button onclick="selectAnswer(this, 'q3', 'C')">C) Solanism</button>
+      <button onclick="selectAnswer(this, 'q3', 'D')">D) The Echoic Path</button>
+      <button onclick="selectAnswer(this, 'q3', 'E')">E) Celestian Way</button>
     </div>
 
     <div class="container">
-        <h2>Question 4: What type of government rules the Gavonion Isles?</h2>
-        <button onclick="selectAnswer(this, 'q4')">A) Emperor</button>
-        <button onclick="selectAnswer(this, 'q4')">B) Prime Minister</button>
-        <button onclick="selectAnswer(this, 'q4')">C) Dictator</button>
-        <button onclick="selectAnswer(this, 'q4')">D) King or Queen</button>
+      <h2>Question 4: What type of government rules the Gavonion Isles?</h2>
+      <button onclick="selectAnswer(this, 'q4', 'A')">A) Emperor</button>
+      <button onclick="selectAnswer(this, 'q4', 'B')">B) Prime Minister</button>
+      <button onclick="selectAnswer(this, 'q4', 'C')">C) Dictator</button>
+      <button onclick="selectAnswer(this, 'q4', 'D')">D) King or Queen</button>
+      <button onclick="selectAnswer(this, 'q4', 'E')">E) Grand Council</button>
     </div>
 
     <div class="container">
-        <h2>Question 5: What is the national animal of the Gavonion Isles?</h2>
-        <button onclick="selectAnswer(this, 'q5')">A) Dolphin</button>
-        <button onclick="selectAnswer(this, 'q5')">B) Sea Turtle</button>
-        <button onclick="selectAnswer(this, 'q5')">C) Manta Ray</button>
-        <button onclick="selectAnswer(this, 'q5')">D) Blue Marlin</button>
+      <h2>Question 5: What is the national animal of the Gavonion Isles?</h2>
+      <button onclick="selectAnswer(this, 'q5', 'A')">A) Dolphin</button>
+      <button onclick="selectAnswer(this, 'q5', 'B')">B) Sea Turtle</button>
+      <button onclick="selectAnswer(this, 'q5', 'C')">C) Manta Ray</button>
+      <button onclick="selectAnswer(this, 'q5', 'D')">D) Blue Marlin</button>
+      <button onclick="selectAnswer(this, 'q5', 'E')">E) Coral Fox</button>
     </div>
 
     <div class="container">
-        <h2>Question 6: What is the most popular landmark in the Gavonion Isles?</h2>
-        <button onclick="selectAnswer(this, 'q6')">A) Velmoran Fortress</button>
-        <button onclick="selectAnswer(this, 'q6')">B) Gavonion Pinnacle</button>
-        <button onclick="selectAnswer(this, 'q6')">C) Starveil Observatory</button>
-        <button onclick="selectAnswer(this, 'q6')">D) Suncrest Arch</button>
+      <h2>Question 6: What is the most popular landmark in the Gavonion Isles?</h2>
+      <button onclick="selectAnswer(this, 'q6', 'A')">A) Velmoran Fortress</button>
+      <button onclick="selectAnswer(this, 'q6', 'B')">B) Gavonion Pinnacle</button>
+      <button onclick="selectAnswer(this, 'q6', 'C')">C) Starveil Observatory</button>
+      <button onclick="selectAnswer(this, 'q6', 'D')">D) Suncrest Arch</button>
+      <button onclick="selectAnswer(this, 'q6', 'E')">E) Azure Caverns</button>
     </div>
 
     <div class="container">
-        <h2>Question 7: What color is mostly on the Gavonion Isles flag?</h2>
-        <button onclick="selectAnswer(this, 'q7')">A) White</button>
-        <button onclick="selectAnswer(this, 'q7')">B) Green</button>
-        <button onclick="selectAnswer(this, 'q7')">C) Yellow</button>
-        <button onclick="selectAnswer(this, 'q7')">D) Blue</button>
+      <h2>Question 7: What color is mostly on the Gavonion Isles flag?</h2>
+      <button onclick="selectAnswer(this, 'q7', 'A')">A) White</button>
+      <button onclick="selectAnswer(this, 'q7', 'B')">B) Green</button>
+      <button onclick="selectAnswer(this, 'q7', 'C')">C) Yellow</button>
+      <button onclick="selectAnswer(this, 'q7', 'D')">D) Blue</button>
+      <button onclick="selectAnswer(this, 'q7', 'E')">E) Teal</button>
     </div>
 
     <div class="container">
-        <h2>Question 8: What is the national anthem of the Gavonion Isles?</h2>
-        <button onclick="selectAnswer(this, 'q8')">A) Echo of the Horizon</button>
-        <button onclick="selectAnswer(this, 'q8')">B) Waves of Unity</button>
-        <button onclick="selectAnswer(this, 'q8')">C) Tides of Freedom</button>
-        <button onclick="selectAnswer(this, 'q8')">D) Stars Above, Seas Below</button>
+      <h2>Question 8: What is the national anthem of the Gavonion Isles?</h2>
+      <button onclick="selectAnswer(this, 'q8', 'A')">A) Echo of the Horizon</button>
+      <button onclick="selectAnswer(this, 'q8', 'B')">B) Waves of Unity</button>
+      <button onclick="selectAnswer(this, 'q8', 'C')">C) Tides of Freedom</button>
+      <button onclick="selectAnswer(this, 'q8', 'D')">D) Stars Above, Seas Below</button>
+      <button onclick="selectAnswer(this, 'q8', 'E')">E) Dawn Over Havenport</button>
     </div>
 
     <div class="container">
-        <h2>Question 9: What is the official currency of the Gavonion Isles?</h2>
-        <button onclick="selectAnswer(this, 'q9')">A) Gavonion Tide</button>
-        <button onclick="selectAnswer(this, 'q9')">B) Gavonion Crest</button>
-        <button onclick="selectAnswer(this, 'q9')">C) Gavonion Sovereign</button>
-        <button onclick="selectAnswer(this, 'q9')">D) Gavonion Star</button>
+      <h2>Question 9: What is the official currency of the Gavonion Isles?</h2>
+      <button onclick="selectAnswer(this, 'q9', 'A')">A) Gavonion Tide</button>
+      <button onclick="selectAnswer(this, 'q9', 'B')">B) Gavonion Crest</button>
+      <button onclick="selectAnswer(this, 'q9', 'C')">C) Gavonion Sovereign</button>
+      <button onclick="selectAnswer(this, 'q9', 'D')">D) Gavonion Star</button>
+      <button onclick="selectAnswer(this, 'q9', 'E')">E) Gavonion Pearl</button>
     </div>
 
     <div class="container">
-        <h2>Question 10: When is the National Day of the Gavonion Isles?</h2>
-        <button onclick="selectAnswer(this, 'q10')">A) June 17</button> <!-- Official National Day -->
-        <button onclick="selectAnswer(this, 'q10')">B) February 29</button> <!-- Leap Day -->
-        <button onclick="selectAnswer(this, 'q10')">C) October 31</button> <!-- Halloween -->
-        <button onclick="selectAnswer(this, 'q10')">D) July 20</button> <!-- Moon Landing Anniversary -->
+      <h2>Question 10: When is the National Day of the Gavonion Isles?</h2>
+      <button onclick="selectAnswer(this, 'q10', 'A')">A) March 3</button>
+      <button onclick="selectAnswer(this, 'q10', 'B')">B) February 29</button>
+      <button onclick="selectAnswer(this, 'q10', 'C')">C) October 31</button>
+      <button onclick="selectAnswer(this, 'q10', 'D')">D) July 20</button>
+      <button onclick="selectAnswer(this, 'q10', 'E')">E) June 17</button>
     </div>
 
-    <script>
-        function selectAnswer(button, questionId) {
-            let buttons = document.querySelectorAll(`.container button[onclick*='${questionId}']`);
-            buttons.forEach(btn => btn.classList.remove("selected"));
-            button.classList.add("selected");
-        }
-    </script>
+    <button id="submit-btn" onclick="submitQuiz()">Submit Quiz</button>
+    <div id="result"></div>
+  </div>
+
+  <script>
+    const answers = {};
+    const correctAnswers = {
+      q1: 'B', q2: 'A', q3: 'C', q4: 'B', q5: 'D', 
+      q6: 'B', q7: 'D', q8: 'A', q9: 'C', q10: 'E'
+    };
+
+    function selectAnswer(button, questionId, answerLetter) {
+      let buttons = document.querySelectorAll(`.container button[onclick*='${questionId}']`);
+      buttons.forEach(btn => btn.classList.remove("selected"));
+      button.classList.add("selected");
+      answers[questionId] = answerLetter;
+    }
+
+    function submitQuiz() {
+      // Simply display a message without revealing any score
+      document.getElementById('result').innerText = "Quiz Submitted. Thank you for participating!";
+    }
+  </script>
 
 </body>
 </html>
-<script>
-    function submitQuiz() {
-        window.location.href = "thankyou.html";  // Replace "your_page.html" with your desired destination
-    }
-</script>
