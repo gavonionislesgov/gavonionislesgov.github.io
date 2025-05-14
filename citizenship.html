@@ -51,12 +51,17 @@
       font-size: 1.2rem;
       border-radius: 8px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-      transition: background 0.3s ease-in-out;
+      transition: background 0.3s ease-in-out, box-shadow 0.3s ease;
     }
 
     button:hover {
       background: rgba(0, 77, 64, 1);
       text-shadow: 0 0 6px #00e676;
+    }
+
+    button:active {
+      box-shadow: 0 0 10px #00e676, 0 0 15px #00e676, 0 0 20px #00e676;
+      transform: scale(0.98);
     }
 
     .selected {
