@@ -2,137 +2,96 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>The Gavonion Isles</title>
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
     body {
       margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      text-align: center;
-      background: linear-gradient(to right, #00bcd4, #00e676);
+      font-family: Arial, sans-serif;
+      background-color: #e0f2ff;
       color: white;
     }
-
     header {
-      background: rgba(0, 77, 64, 0.85);
-      padding: 1.2rem;
-      width: 100%;
+      background-color: #4da6ff;
+      padding: 2rem;
+      text-align: center;
     }
-
     header h1 {
       margin: 0;
       font-size: 2.5rem;
-      display: inline-block;
-      animation: rotateText 3s infinite alternate ease-in-out;
     }
-
-    @keyframes rotateText {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(3deg); }
-    }
-
     nav {
-      margin-top: 0.5rem;
+      background-color: #3399ff;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem;
+      flex-wrap: wrap;
     }
-
     nav a {
       color: white;
       text-decoration: none;
-      margin: 0 10px;
       font-weight: bold;
     }
-
-    nav a:hover {
-      text-shadow: 0 0 6px #00e676;
-    }
-
-    .intro {
-      background: rgba(0, 77, 64, 0.8);
-      padding: 1.5rem;
-      margin: 1rem auto;
-      border-radius: 10px;
-      max-width: 80%;
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-    }
-
     section {
-      background: rgba(255, 255, 255, 0.1);
-      padding: 1rem;
-      margin: 1rem auto;
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+      background-color: #66b3ff;
+      margin-bottom: 1rem;
       border-radius: 10px;
-      max-width: 80%;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     }
-
-    section h2 {
-      color: #d0f1f1;
-    }
-
-    a {
-      color: #c8e6c9;
+    footer {
+      background-color: #4da6ff;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>🏝️ The Gavonion Isles</h1>
-    <p>"Unity. Freedom. Imagination."</p>
-    <nav>
-      <a href="about.html">About</a>
-      <a href="geography.html">Geography</a>
-      <a href="#eco">Economy</a>
-      <a href="military.html">Military</a>
-      <a href="#culture">Culture</a>
-      <a href="citizenship.html">Citizenship</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <h1>Welcome to the Gavonion Isles</h1>
+    <p>A proud and peaceful micronation</p>
   </header>
 
-  <div class="intro">
-    <h2>Welcome!</h2>
-    <p>Step into a world of color, freedom, and boundless imagination.</p>
-  </div>
+  <nav>
+    <a href="#history">History</a>
+    <a href="#culture">Culture</a>
+    <a href="#government">Government</a>
+    <a href="#tourism">Tourism</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-  <section id="about">
-    <h2>About</h2>
-    <p>Born in 2025, the Isles celebrate peace, art, and open minds.</p>
-  </section>
-
-  <section id="geo">
-    <h2>Geography</h2>
-    <p>Seven islands, blue waters, green forests, golden sand.</p>
-  </section>
-
-  <section id="eco">
-    <h2>Economy</h2>
-    <p>Trade thrives on ideas, art, and experiences—tourists love it here!</p>
-  </section>
-
-  <section id="mil">
-    <h2>Military</h2>
-    <p>We seek peace but guard our shores with pride and care.</p>
+  <section id="history">
+    <h2>History</h2>
+    <p>The Gavonion Isles were founded with the vision of unity, peace, and cultural pride. From humble beginnings, the nation has blossomed into a symbol of independence and identity.</p>
   </section>
 
   <section id="culture">
     <h2>Culture</h2>
-    <p>Music and lights fill our festivals—joy is everywhere.</p>
+    <p>Gavonian culture celebrates creativity, nature, and community. Traditional festivals, music, and cuisine are essential parts of daily life, blending the old with the new.</p>
   </section>
 
-  <section id="cit">
-    <h2>Citizenship</h2>
-    <p>All are welcome. Be part of our dream.</p>
+  <section id="government">
+    <h2>Government</h2>
+    <p>The Gavonion Isles is a sovereign democratic micronation, led by a Chancellor and a Council. Citizens take pride in actively shaping the future through regular assemblies and referendums.</p>
+  </section>
+
+  <section id="tourism">
+    <h2>Tourism</h2>
+    <p>Explore our lush landscapes, coastal cliffs, and cultural landmarks. The Gavonion Isles welcome all visitors seeking peace, adventure, and a unique story to take home.</p>
   </section>
 
   <section id="contact">
     <h2>Contact</h2>
-    <p>Email: <a href="mailto:gavonionisles@example.com">gavonionisles@example.com</a></p>
+    <p>Email us at: <strong>contact@gavonionisles.org</strong></p>
   </section>
+
+  <footer>
+    &copy; 2025 The Gavonion Isles
+  </footer>
 
 </body>
 </html>
